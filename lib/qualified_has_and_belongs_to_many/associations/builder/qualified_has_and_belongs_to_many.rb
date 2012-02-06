@@ -6,6 +6,15 @@ module ActiveRecord::Associations::Builder
 
     self.valid_options += [:qualifier, :qualifier_class_name, :qualifier_id, :qualifier_foreign_key]
 
+    def self.build(model, name, qualifier, options, &extension)
+      new(model, name, qualifier, options, &extenstion).build
+    end
+
+    def initialize(model, name, qualifier, options, &extension)
+      super(model, name, options, &extension)
+      options[:qualifier] = qualifier
+    end
+
     def build
       join_table_option = options[:join_table]
       reflection = super
