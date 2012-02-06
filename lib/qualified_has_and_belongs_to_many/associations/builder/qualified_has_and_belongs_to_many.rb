@@ -18,7 +18,7 @@ module ActiveRecord::Associations::Builder
     # TODO: Eventually ActiveRecord will define a reflection.join_table method.
     #       When that happens, this method should be moved into Reflection.
     def set_join_table(reflection, join_table_option = nil)
-      reflection[:join_table] = !join_table_option.nil? ? join_table_option : 
+      reflection.options[:join_table] = !join_table_option.nil? ? join_table_option : 
         join_table_name(model.send(:undecorated_table_name, model.to_s),
                         model.send(:undecorated_table_name, reflection.class_name),
                         model.send(:undecorated_table_name, reflection.qualifier_class_name))
