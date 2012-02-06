@@ -21,12 +21,12 @@ module ActiveRecord
         elsif stale_target?
           reload
         end
-
+        debugger
         if id_or_record
           @qualifier_id = reflection.get_qualifier_id_from_id_or_record(id_or_record)
           proxy.where "#{reflection.qualifier_foreign_key}  = #{@qualifier_id.to_s}"
         end
-
+        
         proxy
       end
 
