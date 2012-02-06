@@ -8,8 +8,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Chris Hoffman"]
   s.email       = ["choffman@beechstcap.com"]
   s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.summary     = %q{Qualified M:N Assocations.}
+  s.description = %q{QualifiedHasAndBelongsToMany provides qualifed many-to-many associations.}
 
   s.rubyforge_project = "qualified_has_and_belongs_to_many"
 
