@@ -7,7 +7,7 @@ module ActiveRecord::Associations::Builder
     self.valid_options += [:qualifier, :qualifier_class_name, :qualifier_id, :qualifier_foreign_key]
 
     def self.build(model, name, qualifier, options, &extension)
-      new(model, name, qualifier, options, &extenstion).build
+      new(model, name, qualifier, options, &extension).build
     end
 
     def initialize(model, name, qualifier, options, &extension)
