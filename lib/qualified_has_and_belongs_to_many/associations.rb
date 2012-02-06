@@ -10,8 +10,8 @@ module ActiveRecord::Associations
   private
 
   module ClassMethods
-    def qualified_has_and_belongs_to_many(name, qualified_by, options = {}, &extension)
-      options[:qualified_by] = qualified_by
+    def qualified_has_and_belongs_to_many(name, qualifier, options = {}, &extension)
+      options[:qualifier] = qualifier
       Builder::QualifiedHasAndBelongsToMany.build(self, name, options, &extension)
     end
   end
