@@ -53,7 +53,7 @@ module ActiveRecord::Reflection
     end
 
     def association_class
-      Associations::QualifiedHasAndBelongsToManyAssociation
+      ActiveRecord::Associations::QualifiedHasAndBelongsToManyAssociation
     end
 
     def get_qualifier_id_from_id_or_record(id_or_record)
