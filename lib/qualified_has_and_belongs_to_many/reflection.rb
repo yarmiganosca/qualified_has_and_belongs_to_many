@@ -37,6 +37,10 @@ module ActiveRecord::Reflection
       @collection = true
     end
 
+    def source_macro
+      :has_and_belongs_to_many
+    end
+
     def qualifier
       @qualifier = options[:qualifier]
     end
