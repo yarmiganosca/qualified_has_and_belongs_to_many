@@ -30,6 +30,7 @@ module ActiveRecord::Reflection
 
     def initialize(macro, name, options, active_record)
       if options[:qualifier].is_a? Hash
+        debugger
         options[:qualifier_class_name] = options[:qualifier][:class_name]
         options[:qualifier_id] = options[:qualifier][:id]
         options[:qualifier] = options[:qualifier][:class_name].underscore.to_sym
