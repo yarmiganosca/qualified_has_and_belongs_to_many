@@ -4,7 +4,7 @@ module ActiveRecord::Associations::Builder
   class QualifiedHasAndBelongsToMany < HasAndBelongsToMany
     self.macro = :qualified_has_and_belongs_to_many
 
-    self.valid_options += [:qualifier, :qualifier_class_name, :qualifier_record_id, :qualifier_foreign_key]
+    self.valid_options += [:qualifier, :qualifier_class_name, :qualifier_id, :qualifier_foreign_key]
 
     def build
       join_table_option = options[:join_table]

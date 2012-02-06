@@ -29,6 +29,12 @@ module ActiveRecord::Reflection
     attr_reader :qualifier_record
 
     def initialize(macro, name, options, active_record)
+      if options[:qualifier].is_a? Hash
+        options[:qualifier_class_name] = options[:qualifier][:class_name]
+        options[:qualifier_id] = options[:qualifier][:id]
+        options[:qualifier] = options[:qualifier][:class_name].underscore.to_sym
+      end
+        
       super
 
       if options[:qualifier_id]
