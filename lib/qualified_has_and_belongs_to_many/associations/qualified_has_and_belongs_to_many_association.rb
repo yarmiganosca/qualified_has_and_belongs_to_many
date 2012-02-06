@@ -16,12 +16,12 @@ module ActiveRecord
       end
 
       def reader(id_or_record = nil, force_reload = false)
+        debugger
         if id_or_record.nil?
           super(force_reload)
         else
           @qualifier_id = reflection.get_qualifier_id_from_id_or_record(id_or_record)
-          #super(force_reload).where "#{reflection.qualifier_foreign_key}  = #{@qualifier_id.to_s}"
-          super(force_reload)
+          super(force_reload).where "#{reflection.qualifier_foreign_key}  = #{@qualifier_id.to_s}"
         end
       end
 
