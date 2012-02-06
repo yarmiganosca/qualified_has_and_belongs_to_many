@@ -34,6 +34,7 @@ module ActiveRecord::Reflection
       if options[:qualifier_id]
         set_qualifier_record(options[:qualifier_id])
       end
+      @collection = true
     end
 
     def qualifier
