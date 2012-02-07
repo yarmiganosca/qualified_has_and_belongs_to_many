@@ -21,7 +21,7 @@ module ActiveRecord
         elsif stale_target?
           reload
         end
-        debugger
+
         if id_or_record
           @qualifier_id = reflection.get_qualifier_id_from_id_or_record(id_or_record)
         elsif reflection.options[:qualifier_id]
