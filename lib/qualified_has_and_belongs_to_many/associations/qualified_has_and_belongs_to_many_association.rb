@@ -41,7 +41,7 @@ module ActiveRecord
             return unless record.save(:validate => validate)
           end
         end
-  
+        debugger
         if options[:insert_sql]
           owner.connection.insert(interpolate(options[:insert_sql], record))
         else
