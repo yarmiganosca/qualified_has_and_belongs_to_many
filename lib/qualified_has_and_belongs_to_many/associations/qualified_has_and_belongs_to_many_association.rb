@@ -7,6 +7,10 @@ module ActiveRecord
         super
       end
 
+      def accepts_qualifiers?
+        true
+      end
+
       def qualifier
         if reflection.qualifier_record
           reflection.qualifier_record
