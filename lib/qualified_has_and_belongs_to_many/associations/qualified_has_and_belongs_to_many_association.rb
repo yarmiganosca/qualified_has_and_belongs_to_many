@@ -24,6 +24,8 @@ module ActiveRecord
         debugger
         if id_or_record
           @qualifier_id = reflection.get_qualifier_id_from_id_or_record(id_or_record)
+        elsif reflection.options[:qualifier_id]
+          @qualifier_id = reflection.options[:qualifier_id]
         end
 
         if @qualifier_id
