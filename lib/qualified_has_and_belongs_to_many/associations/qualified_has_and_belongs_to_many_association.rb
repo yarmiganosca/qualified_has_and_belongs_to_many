@@ -24,10 +24,11 @@ module ActiveRecord
         debugger
         if id_or_record
           @qualifier_id = reflection.get_qualifier_id_from_id_or_record(id_or_record)
+        end
+
+        if @qualifier_id
           proxy.where "#{reflection.qualifier_foreign_key}  = #{@qualifier_id.to_s}"
         end
-        
-        proxy
       end
 
       def insert_record(record, validate = true, raise = false)
