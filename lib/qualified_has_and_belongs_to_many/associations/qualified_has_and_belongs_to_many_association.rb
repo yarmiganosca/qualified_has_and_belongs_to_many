@@ -34,9 +34,9 @@ module ActiveRecord
 
         if @qualifier_id
           proxy.where "#{reflection.qualifier_foreign_key}  = #{@qualifier_id.to_s}"
+        else
+          self
         end
-
-        self
       end
 
       def insert_record(record, validate = true, raise = false)
