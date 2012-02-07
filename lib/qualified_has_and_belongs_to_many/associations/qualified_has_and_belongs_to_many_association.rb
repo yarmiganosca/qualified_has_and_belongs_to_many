@@ -7,10 +7,6 @@ module ActiveRecord
         super
       end
 
-      def accepts_qualifiers?
-        true
-      end
-
       def qualifier
         if reflection.qualifier_record
           reflection.qualifier_record
@@ -35,7 +31,7 @@ module ActiveRecord
         if @qualifier_id
           proxy.where "#{reflection.qualifier_foreign_key}  = #{@qualifier_id.to_s}"
         else
-          self
+          proxy.uniq
         end
       end
 
