@@ -36,7 +36,6 @@ module ActiveRecord
       end
 
       def insert_record(record, validate = true, raise = false)
-        debugger
         if record.new_record?
           if raise
             record.save!(:validate => validate)
