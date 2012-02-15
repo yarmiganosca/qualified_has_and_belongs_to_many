@@ -11,6 +11,7 @@ module ActiveRecord::Associations
 
   module ClassMethods
     def qualified_has_and_belongs_to_many(name, qualifier, options = {}, &extension)
+      debugger
       Builder::QualifiedHasAndBelongsToMany.build(self, name, qualifier, options, &extension)
     end
   end
