@@ -1,4 +1,4 @@
-#require 'qualified_has_and_belongs_to_many/associations/builder/association'
+require 'qualified_has_and_belongs_to_many/associations/builder/association'
 require 'active_record/associations/builder/has_and_belongs_to_many'
 
 module ActiveRecord::Associations::Builder
