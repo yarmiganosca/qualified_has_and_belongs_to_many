@@ -5,7 +5,7 @@ module ActiveRecord::Reflection
 
   included do
     class_attribute :reflections
-    self.refelctions = {}
+    self.reflections = {}
   end
 
   module ClassMethods

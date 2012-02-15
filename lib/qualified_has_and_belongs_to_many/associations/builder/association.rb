@@ -1,6 +1,6 @@
 module ActiveRecord::Associations::Builder
   class Association
-    debugger
-    self.valid_options << :additional_options
+    class_attribute :valid_options
+    self.valid_options += [:additional_options]
   end
 end
