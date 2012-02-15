@@ -1,3 +1,5 @@
+require 'active_record/associations'
+
 module ActiveRecord::Associations
   extend ActiveSupport::Concern
     
