@@ -13,8 +13,8 @@ module ActiveRecord
         else
           reflection.qualifier_class.find(@qualifier_id)
         end
-      end
-
+      en
+d
       def reader(id_or_record = nil, force_reload = false)
         if force_reload
           klass.uncached { reload }
@@ -29,9 +29,9 @@ module ActiveRecord
         end
 
         if @qualifier_id
-          proxy.where "#{reflection.qualifier_foreign_key}  = #{@qualifier_id.to_s}"
+          proxy.where "#{reflection.qualifier_foreign_key} = #{@qualifier_id.to_s}"
         else
-          proxy.uniq
+          proxy
         end
       end
 
