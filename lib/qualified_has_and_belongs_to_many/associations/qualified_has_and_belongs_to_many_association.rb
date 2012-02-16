@@ -29,6 +29,7 @@ module ActiveRecord
         end
 
         if @qualifier_id
+          debugger
           proxy.where "#{reflection.qualifier_foreign_key} = #{@qualifier_id.to_s}"
         else
           proxy
