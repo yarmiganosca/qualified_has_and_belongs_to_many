@@ -56,7 +56,7 @@ module ActiveRecord::Reflection
     def qualifier_foreign_key
       @qualifier_foreign_key ||= options[:qualifier_foreign_key] || qualifier_class_name.foreign_key
     end
-
+    
     def association_class
       ActiveRecord::Associations::QualifiedHasAndBelongsToManyAssociation
     end

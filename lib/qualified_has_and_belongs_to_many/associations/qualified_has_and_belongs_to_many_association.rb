@@ -13,8 +13,8 @@ module ActiveRecord
         else
           reflection.qualifier_class.find(@qualifier_id)
         end
-      en
-d
+      end
+
       def reader(id_or_record = nil, force_reload = false)
         if force_reload
           klass.uncached { reload }
