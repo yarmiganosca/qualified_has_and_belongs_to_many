@@ -1,5 +1,0 @@
-module ActiveRecord
-  module Associations
-    extend ActiveSupport::Concern
-    
-    autoload :QualifiedHasAndBelongsToManyAssociation, 'qualified_has_and_belongs_to_many/associations'
